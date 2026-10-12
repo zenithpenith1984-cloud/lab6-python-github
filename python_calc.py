@@ -62,4 +62,4 @@ while continueCalc:
     else:
         print("Input a valid number!")
 
-print("Have a nice day!")
+print("Have a nice day lad!")
