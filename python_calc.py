@@ -1,5 +1,5 @@
-print("Thank you for using the calculator!\nHere are your options:")
-print("1.Addition\n2.Subtraction\n3.Multipication\n4.Division\n5.Check Even/Odd\n6.Calculate Percentage\n7.Exit")
+print("Welcome to the calculator!\nHere are your options:")
+print("1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Check Even/Odd\n6.Calculate Percentage\n7.Exit")
 continueCalc = True
 
 def even_or_odd(num1):
@@ -51,15 +51,18 @@ while continueCalc:
         print(result)
 
     elif userOption == "6":
-        num1 = float(input("Input a number: "))
-        num2 = float(input("Input a second number: "))
-        perc = percentage(num1,num2)
-        print(perc)
-
+        try:
+            num1 = float(input("Input a number: "))
+            num2 = float(input("Input a second number: "))
+            perc = percentage(num1,num2)
+            print(perc)
+        except ZeroDivisionError:
+                result = float('inf') 
+                print("Cannot divide by zero. Result set to infinity.")
     elif userOption == "7":
         continueCalc = False
 
     else:
-        print("Input a valid number!")
+        print("Invalid Input! Please enter a valid number!")
 
-print("Have a nice day lad!")
+print("Have a nice day!")
